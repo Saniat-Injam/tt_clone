@@ -119,16 +119,8 @@ class LoginScreen extends StatelessWidget {
                     height: 56.h,
                     width: double.infinity,
                     child: ElevatedButton(
-                      // onPressed: () async {
-                      //   await loginController.login(); // 👈 Now calls login()
-                      //   Get.to(() => NavBarScreens());
-                      // },
-                      // Inside ElevatedButton
-                      onPressed: () async {
-                        final success = await loginController.login();
-                        if (success) {
-                          Get.offAll(() => NavBar());
-                        }
+                      onPressed: () {
+                        loginController.login();
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.buttonBackground,

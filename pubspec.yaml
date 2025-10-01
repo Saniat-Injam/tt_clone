@@ -54,6 +54,7 @@ dependencies:
   json_annotation: 
   build_runner: 
   json_serializable: 
+  gradient_borders: ^1.0.2
 
 dev_dependencies:
   flutter_test:
