@@ -59,8 +59,8 @@
 
 // }
 
-class FormValidator {
-  FormValidator._();
+class AppValidator {
+  AppValidator._();
 
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
