@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
 import 'package:tt_clone/core/utils/constants/image_path.dart';
+import 'package:gradient_borders/gradient_borders.dart'; // Add this import
 
 class ForgottenPassword extends StatelessWidget {
   const ForgottenPassword({super.key});
