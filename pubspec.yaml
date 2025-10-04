@@ -44,6 +44,8 @@ dependencies:
   shared_preferences: 
   pinput:
   pin_code_fields:
+  flutter_svg:
+  image_picker: ^1.1.2
     
   # Icons
   iconsax: 
