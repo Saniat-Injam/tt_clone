@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:tt_clone/features/auth/screen/profile_setup_screen.dart';
+import 'package:tt_clone/features/account_setup/screens/profile_setting_screen.dart';
 import 'package:tt_clone/features/auth/screen/registration_screen.dart';
 import 'package:tt_clone/features/auth/screen/reset_password_screen.dart';
 import 'package:tt_clone/features/home/screens/navbar.dart';
@@ -15,7 +15,7 @@ class AppRoute {
   static List<GetPage> routes = [
     GetPage(name: loginScreen, page: () => RegistrationScreen()),
     GetPage(name: resetPasswordScreen, page: () => ResetPasswordScreen()),
-    GetPage(name: profileSetupScreen, page: () => ProfileSetupScreen()),
+    GetPage(name: profileSetupScreen, page: () => ProfileSettingScreen()),
     GetPage(name: navBar, page: () => NavBar()),
   ];
 }
