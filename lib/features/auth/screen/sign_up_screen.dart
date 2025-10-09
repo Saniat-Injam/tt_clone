@@ -4,14 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tt_clone/core/common/presentation/widgets/custom_text_form_field.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
-import 'package:tt_clone/features/auth/controller/registration_controller.dart';
+import 'package:tt_clone/features/auth/controller/sign_up_controller.dart';
 import 'package:tt_clone/features/auth/screen/login_screen.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  final RegistrationController registrationController = Get.put(
-    RegistrationController(),
-  );
-  RegistrationScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  final SignUpController registrationController = Get.put(SignUpController());
+  SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

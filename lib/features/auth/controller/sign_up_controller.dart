@@ -10,7 +10,7 @@ import 'package:tt_clone/core/services/network_caller.dart';
 import 'package:tt_clone/core/utils/constants/api_constants.dart';
 import 'package:tt_clone/core/utils/logging/logger.dart';
 
-class RegistrationController extends GetxController {
+class SignUpController extends GetxController {
   var isPasswordHidden = true.obs;
   var rememberMe = false.obs;
   // var isLoading = false.obs;
