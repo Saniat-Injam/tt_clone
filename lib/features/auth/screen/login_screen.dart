@@ -6,7 +6,7 @@ import 'package:tt_clone/core/common/presentation/widgets/custom_text_form_field
 
 import 'package:tt_clone/core/utils/constants/colors.dart';
 import 'package:tt_clone/features/auth/controller/login_controller.dart';
-import 'package:tt_clone/features/auth/screen/registration_screen.dart';
+import 'package:tt_clone/features/auth/screen/sign_up_screen.dart';
 import 'package:tt_clone/features/home/screens/navbar.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -209,7 +209,7 @@ class LoginScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                           recognizer: TapGestureRecognizer()
-                            ..onTap = () => Get.to(RegistrationScreen()),
+                            ..onTap = () => Get.to(SignUpScreen()),
                         ),
                       ],
                     ),

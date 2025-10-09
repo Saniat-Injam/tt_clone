@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_intl_phone_field/flutter_intl_phone_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tt_clone/core/common/presentation/widgets/custom_text_form_field.dart';
+import 'package:tt_clone/core/utils/constants/colors.dart';
 import 'package:tt_clone/core/utils/constants/image_path.dart';
 import 'package:tt_clone/features/account_setup/controller/country_controller.dart';
 import 'package:tt_clone/features/account_setup/controller/profile_setting_controller.dart';
@@ -64,8 +67,9 @@ class ProfileSettingScreen extends StatelessWidget {
                 ),
               ],
             ),
-
             SizedBox(height: 20),
+
+            // Full Name
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: CustomTextFormField(
@@ -75,6 +79,8 @@ class ProfileSettingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+
+            // User Name
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: CustomTextFormField(
@@ -84,6 +90,8 @@ class ProfileSettingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+
+            // Date of Birth
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Obx(
@@ -99,6 +107,8 @@ class ProfileSettingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+
+            // Email
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: CustomTextFormField(
@@ -109,55 +119,93 @@ class ProfileSettingScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
+
+            // Phone Number with Country Code
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 20),
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //       color: Color(0xFFF5F5F5),
+            //       borderRadius: BorderRadius.circular(12),
+            //     ),
+            //     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+            //     child: Row(
+            //       children: [
+            //         Obx(
+            //           () => DropdownButtonHideUnderline(
+            //             child: DropdownButton<String>(
+            //               value: countryController.selectedFlag.value,
+            //               items: countryController.countries.map((country) {
+            //                 return DropdownMenuItem<String>(
+            //                   value: country['flag'],
+            //                   child: Text(
+            //                     "${country['flag']}",
+            //                     style: GoogleFonts.inter(
+            //                       fontSize: 18.sp,
+            //                       fontWeight: FontWeight.w400,
+            //                     ),
+            //                   ),
+            //                 );
+            //               }).toList(),
+            //               onChanged: (value) {
+            //                 if (value != null) {
+            //                   countryController.updateCountry(value);
+            //                 }
+            //               },
+            //               icon: Icon(Icons.keyboard_arrow_down),
+            //             ),
+            //           ),
+            //         ),
+            //         SizedBox(width: 8.w),
+            //         Expanded(
+            //           child: CustomTextFormField(
+            //             hintText: "Phone Number",
+            //             fillColor: Color(0xFFF5F5F5),
+            //             readOnly: true,
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
+
+            // Phone Number
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(12),
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: IntlPhoneField(
+                initialCountryCode: 'US',
+                dropdownIcon: Icon(
+                  //Icons.arrow_drop_down,
+                  CupertinoIcons.chevron_down,
+                  color: Colors.black,
+                  size: 16,
                 ),
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                child: Row(
-                  children: [
-                    Obx(
-                      () => DropdownButtonHideUnderline(
-                        child: DropdownButton<String>(
-                          value: countryController.selectedFlag.value,
-                          items: countryController.countries.map((country) {
-                            return DropdownMenuItem<String>(
-                              value: country['flag'],
-                              child: Text(
-                                "${country['flag']}",
-                                style: GoogleFonts.inter(
-                                  fontSize: 18.sp,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            );
-                          }).toList(),
-                          onChanged: (value) {
-                            if (value != null) {
-                              countryController.updateCountry(value);
-                            }
-                          },
-                          icon: Icon(Icons.keyboard_arrow_down),
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 8.w),
-                    Expanded(
-                      child: CustomTextFormField(
-                        hintText: "Phone Number",
-                        fillColor: Color(0xFFF5F5F5),
-                        readOnly: true,
-                      ),
-                    ),
-                  ],
+                dropdownIconPosition: IconPosition.trailing,
+                decoration: InputDecoration(
+                  hintText: 'Phone number',
+                  filled: true,
+                  fillColor: Color(0xFFF5F5F5),
+                  counterText: "",
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide.none,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide(color: AppColors.blue),
+                  ),
                 ),
+                flagsButtonPadding: const EdgeInsets.only(left: 12),
+                onChanged: (phone) {
+                  debugPrint(phone.completeNumber);
+                  //authController.fullPhoneNumber.value = phone.completeNumber;
+                },
               ),
             ),
 
             SizedBox(height: 20),
+
+            // Occupation
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: CustomTextFormField(
@@ -171,6 +219,7 @@ class ProfileSettingScreen extends StatelessWidget {
         ),
       ),
 
+      // Continue Button
       bottomNavigationBar: InkWell(
         onTap: () => Get.to(() => FollowSomeone()),
         child: Container(
