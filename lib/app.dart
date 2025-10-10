@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:tt_clone/features/auth/screen/dummy_login_screen.dart';
 import 'package:tt_clone/routes/app_routes.dart';
 import 'core/bindings/controller_binder.dart';
 import 'core/utils/theme/theme.dart';
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          //initialRoute: AppRoute.getLoginScreen(),
-          initialRoute: AppRoute.countryPickerScreeen(),
+          initialRoute: AppRoute.getLoginScreen(),
+          //initialRoute: AppRoute.getDummyLoginScreen(),
           getPages: AppRoute.routes,
           initialBinding: ControllerBinder(),
           themeMode: ThemeMode.system,
