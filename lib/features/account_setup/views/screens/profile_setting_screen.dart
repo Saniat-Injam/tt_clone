@@ -9,7 +9,7 @@ import 'package:tt_clone/core/utils/constants/colors.dart';
 import 'package:tt_clone/core/utils/constants/image_path.dart';
 import 'package:tt_clone/features/account_setup/controller/country_controller.dart';
 import 'package:tt_clone/features/account_setup/controller/profile_setting_controller.dart';
-import 'package:tt_clone/features/auth/screen/follow_someone_screen.dart';
+import 'package:tt_clone/features/auth/views/screens/follow_someone_screen.dart';
 
 class ProfileSettingScreen extends StatelessWidget {
   ProfileSettingScreen({super.key});

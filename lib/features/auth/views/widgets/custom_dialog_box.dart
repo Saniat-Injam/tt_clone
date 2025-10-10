@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tt_clone/core/common/presentation/widgets/custom_text.dart';
-import '../../../../core/utils/constants/app_sizes.dart';
-import '../../../../core/utils/constants/image_path.dart';
+import '../../../../../core/utils/constants/app_sizes.dart';
+import '../../../../../core/utils/constants/image_path.dart';
 
 class CustomDialogBox extends StatelessWidget {
   const CustomDialogBox({super.key});

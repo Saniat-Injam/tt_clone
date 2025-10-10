@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tt_clone/features/account_setup/controller/country_picker_controller.dart';
-import 'package:tt_clone/features/account_setup/screens/dummy_profile_screen.dart';
-import 'package:tt_clone/features/account_setup/screens/profile_setting_screen.dart';
+import 'package:tt_clone/features/account_setup/views/screens/profile_setting_screen.dart';
 
 class CountryPickerScreen extends StatelessWidget {
   const CountryPickerScreen({super.key});
@@ -40,7 +39,7 @@ class CountryPickerScreen extends StatelessWidget {
               ),
             ),
 
-            // 🌍 Country List (Reactive)
+            // Country List (Reactive)
             Expanded(
               child: Obx(() {
                 final countries = controller.filteredCountries;
@@ -91,7 +90,7 @@ class CountryPickerScreen extends StatelessWidget {
               }),
             ),
 
-            // ✅ Continue Button
+            // Continue Button
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: SizedBox(

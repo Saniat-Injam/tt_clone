@@ -5,9 +5,8 @@ import 'package:get/get.dart';
 import 'package:tt_clone/core/common/presentation/widgets/custom_text_form_field.dart';
 
 import 'package:tt_clone/core/utils/constants/colors.dart';
-import 'package:tt_clone/features/auth/controller/login_controller.dart';
-import 'package:tt_clone/features/auth/screen/sign_up_screen.dart';
-import 'package:tt_clone/features/home/screens/navbar.dart';
+import 'package:tt_clone/features/auth/controllers/login_controller.dart';
+import 'package:tt_clone/features/auth/views/screens/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -42,8 +41,8 @@ class LoginScreen extends StatelessWidget {
                   // ** Email Input ** (UPDATED with controller)
                   SizedBox(height: 50.25.h),
                   CustomTextFormField(
-                    controller: loginController.emailTEController, // 👈 Added
-                    hintText: "john.doe@domain.com",
+                    controller: loginController.emailTEController,
+                    hintText: "Enter your email",
                     hintStyle: TextStyle(
                       fontSize: 14.sp,
                       color: AppColors.hintText,
@@ -60,11 +59,10 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: 20.h),
                   Obx(
                     () => CustomTextFormField(
-                      controller:
-                          loginController.passwordTEController, // 👈 Added
-                      hintText: "●●●●●●●●●●●●",
+                      controller: loginController.passwordTEController,
+                      hintText: "Enter your password",
                       hintStyle: TextStyle(
-                        fontSize: 10.sp,
+                        fontSize: 14.sp,
                         color: AppColors.hintText,
                         fontWeight: FontWeight.w600,
                       ),
@@ -77,8 +75,8 @@ class LoginScreen extends StatelessWidget {
                         onTap: loginController.togglePasswordVisibility,
                         child: Icon(
                           loginController.isPasswordHidden.value
-                              ? Icons.visibility_off
-                              : Icons.visibility,
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                           color: Colors.grey,
                         ),
                       ),
@@ -138,7 +136,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // Forgot password + rest of your UI unchanged...
                   SizedBox(height: 24.h),
                   GestureDetector(
                     onTap: () {

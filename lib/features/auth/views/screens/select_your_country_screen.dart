@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tt_clone/features/account_setup/controller/select_your_country_controller.dart';
-import 'package:tt_clone/features/account_setup/screens/profile_setting_screen.dart';
+import 'package:tt_clone/features/account_setup/views/screens/profile_setting_screen.dart';
 
 class SelectYourCountryScreen extends StatelessWidget {
   SelectYourCountryScreen({super.key});

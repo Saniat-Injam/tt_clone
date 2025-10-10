@@ -9,8 +9,8 @@ import 'package:tt_clone/core/common/presentation/widgets/custom_elevated_button
 import 'package:tt_clone/core/common/presentation/widgets/custom_text.dart';
 import 'package:tt_clone/core/utils/constants/app_sizes.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
-import 'package:tt_clone/features/auth/widget/custom_footer_section_widget.dart';
-import 'package:tt_clone/features/auth/widget/custom_otp_text_form_field_widget.dart';
+import 'package:tt_clone/features/auth/views/widgets/custom_footer_section_widget.dart';
+import 'package:tt_clone/features/auth/views/widgets/custom_otp_text_form_field_widget.dart';
 
 class ForgotOtpScreen extends StatefulWidget {
   const ForgotOtpScreen({super.key});

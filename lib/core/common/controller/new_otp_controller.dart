@@ -5,7 +5,7 @@ import 'package:tt_clone/core/common/presentation/widgets/app_snack_bar.dart';
 import 'package:tt_clone/core/services/network_caller.dart';
 import 'package:tt_clone/core/utils/constants/app_urls.dart';
 import 'package:tt_clone/core/utils/logging/logger.dart';
-import 'package:tt_clone/features/auth/widget/custom_dialog_box.dart';
+import 'package:tt_clone/features/auth/views/widgets/custom_dialog_box.dart';
 import 'package:tt_clone/routes/app_routes.dart';
 
 class OtpController extends GetxController {
