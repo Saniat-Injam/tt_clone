@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
-import '../../../../core/utils/constants/app_sizes.dart';
+import '../../../../../core/utils/constants/app_sizes.dart';
 
 class CustomFooterSection extends StatelessWidget {
   const CustomFooterSection({

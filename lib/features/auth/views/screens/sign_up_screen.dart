@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:tt_clone/core/common/presentation/widgets/custom_text_form_field.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
-import 'package:tt_clone/features/auth/controller/sign_up_controller.dart';
-import 'package:tt_clone/features/auth/screen/login_screen.dart';
+import 'package:tt_clone/features/auth/controllers/sign_up_controller.dart';
+import 'package:tt_clone/features/auth/views/screens/login_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   final SignUpController registrationController = Get.put(SignUpController());
@@ -58,7 +58,7 @@ class SignUpScreen extends StatelessWidget {
                   SizedBox(height: 20.h),
                   CustomTextFormField(
                     controller: registrationController.emailTEController,
-                    hintText: "john.doe@domain.com",
+                    hintText: "Enter your email",
                     hintStyle: TextStyle(
                       fontSize: 14.sp,
                       color: AppColors.hintText,
@@ -75,9 +75,9 @@ class SignUpScreen extends StatelessWidget {
                   Obx(
                     () => CustomTextFormField(
                       controller: registrationController.passwordTEController,
-                      hintText: "●●●●●●●●●●●●",
+                      hintText: "Enter your password",
                       hintStyle: TextStyle(
-                        fontSize: 10.sp,
+                        fontSize: 14.sp,
                         color: AppColors.hintText,
                         fontWeight: FontWeight.w600,
                       ),

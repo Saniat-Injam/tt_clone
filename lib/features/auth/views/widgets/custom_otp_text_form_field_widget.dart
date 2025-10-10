@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:tt_clone/core/utils/constants/colors.dart';
 
-import '../../../../../core/utils/constants/app_sizes.dart';
+import '../../../../../../core/utils/constants/app_sizes.dart';
 
 class CustomOTPTextFormFieldWidget extends StatelessWidget {
   const CustomOTPTextFormFieldWidget({

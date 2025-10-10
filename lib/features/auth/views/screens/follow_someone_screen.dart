@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tt_clone/features/auth/controller/follow_someone_controller.dart';
-import 'package:tt_clone/features/auth/widget/follow_tile.dart';
+import 'package:tt_clone/features/auth/controllers/follow_someone_controller.dart';
+import 'package:tt_clone/features/auth/views/widgets/follow_tile.dart';
 
 import 'package:tt_clone/features/home/screens/navbar.dart';
 
