@@ -7,6 +7,7 @@ import 'package:tt_clone/core/common/presentation/widgets/app_snack_bar.dart';
 import 'package:tt_clone/core/services/auth_service.dart';
 import 'package:tt_clone/core/utils/constants/api_constants.dart';
 import 'package:tt_clone/core/utils/validators/app_validator.dart';
+import 'package:tt_clone/features/account_setup/widgets/country+picker_screen.dart';
 import 'package:tt_clone/routes/app_routes.dart';
 import 'package:tt_clone/core/services/network_caller.dart';
 import 'package:tt_clone/core/models/response_data.dart';
@@ -112,7 +113,8 @@ class LoginController extends GetxController {
 
       /// ✅ Navigate based on profile setup
       if (isProfile == false) {
-        Get.offAllNamed(AppRoute.profileSetupScreen);
+        //Get.offAllNamed(AppRoute.profileSetupScreen);
+        Get.to(() => const CountryPickerScreen());
       } else {
         Get.offAllNamed(AppRoute.navBar);
       }

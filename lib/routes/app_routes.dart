@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:tt_clone/features/account_setup/screens/country_picker_screen.dart';
 import 'package:tt_clone/features/account_setup/screens/profile_setting_screen.dart';
+import 'package:tt_clone/features/auth/screen/dummy_login_screen.dart';
+
 import 'package:tt_clone/features/auth/screen/sign_up_screen.dart';
 import 'package:tt_clone/features/auth/screen/reset_password_screen.dart';
 import 'package:tt_clone/features/home/screens/navbar.dart';
@@ -10,16 +12,16 @@ class AppRoute {
   static String resetPasswordScreen = "/resetPasswordScreen";
   static String profileSetupScreen = "/profileSetupScreen";
   static String navBar = "/navBar";
-  static String countryPickerScreen = "/countryPickerScreen";
+  static String dummyLoginScreen = "/dummyLoginScreen";
 
   static String getLoginScreen() => loginScreen;
-  static String countryPickerScreeen() => countryPickerScreen;
+  static String getDummyLoginScreen() => dummyLoginScreen;
 
   static List<GetPage> routes = [
     GetPage(name: loginScreen, page: () => SignUpScreen()),
     GetPage(name: resetPasswordScreen, page: () => ResetPasswordScreen()),
     GetPage(name: profileSetupScreen, page: () => ProfileSettingScreen()),
     GetPage(name: navBar, page: () => NavBar()),
-    GetPage(name: countryPickerScreen, page: () => CountryPickerScreen()),
+    GetPage(name: dummyLoginScreen, page: () => DummyLoginScreen()),
   ];
 }
